@@ -1,32 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app id="inspire">
+    <div>
+      <v-btn router to="/">about</v-btn>
+      <v-btn router to="/dark">dark</v-btn>
+      <v-btn router to="/Baseline">Baseline</v-btn>
+      <v-btn router to="/Baseline-flipped">Baseline-flipped</v-btn>
+      <v-btn router to="/centered">Centered</v-btn>
+      <v-btn router to="/complex">Complex</v-btn>
+      <v-btn router to="/googlecontacts"> Google-contacts</v-btn>
+      <v-btn router to="/googlekeep">Keep</v-btn>
+      <v-btn router to="/googleyoutube">Youtube</v-btn>
+      <v-btn router to="/sandbox">Sandbox</v-btn>
     </div>
-    <router-view/>
-  </div>
+    <router-view></router-view>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+export default {
+  props: {
+    source: String
+  },
+  data: () => ({
+    drawer: null
+  })
+};
+</script>
